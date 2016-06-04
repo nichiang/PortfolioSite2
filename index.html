@@ -12,20 +12,21 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="scripts/parallax.min.js"></script>
+    <!--<script src="scripts/parallax.min.js"></script>-->
   </head>
   <body>
-    <div id="header">
-      Home /
-      UX Design Work /
-      Virtual Reality /
-      Large Scale Touch Experiences /
-      Mobile Apps /
-      About
+    <div id="header" class="row">
+      <div class="col-xs-1 col-md-2"></div>
+      <div class="col-xs-10 col-md-8">
+      Nick Chiang /
+      <a href="#ux">UX Design</a> /
+      <a href="#about">About</a>
+      </div>
+      <div class="col-xs-1 col-md-2"></div>
     </div>
 
-    <div id="top-banner-img" class="row" data-parallax="scroll" data-image-src="images/river.jpg">
-      <div class="col-xs-1 col-md-6 col-spacer"></div>
+    <div id="top-banner-img" class="row">
+      <div class="col-xs-1 col-md-6"></div>
       <div class="col-xs-10 col-md-4 col-bottom-align">
         <div id="top-banner-desc">
           <h1>Hi, I'm Nick</h1>
@@ -35,7 +36,7 @@
           <p>I love diving deep into HCI problems, with my current focus on designing cross platform VR interactions for devices that range from basic Cardboard headsets, to the highest end desktop VR headsets. In the past, I've worked on touch and stylus interactions, natural user gestures, designing for human factors and cross-device IoT experiences.</p>
         </div>
       </div>
-      <div class="col-xs-1 col-md-2 col-spacer"></div>
+      <div class="col-xs-1 col-md-2"></div>
     </div>
 
     <div class="ux-banner-spacer"></div>
@@ -43,53 +44,31 @@
     <div class="row">
       <div class="col-xs-1 col-md-2"></div>
       <div class="col-xs-10 col-md-8">
-        <h1>UX Design Work</h1>
-      </div>
-      <div class="col-xs-1 col-md-2"></div>
-    </div>
-    
-    <div id="ux-vr" class="row ux-banner" data-parallax="scroll" data-image-src="images/cars.jpg">
-      <div class="col-xs-1 col-md-6 col-spacer"></div>
-      <div class="col-xs-10 col-md-4 col-bottom-align">
-        <div class="ux-banner-desc">
-          <h2>Virtual Reality</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-      <div class="col-xs-1 col-md-2 col-spacer"></div>
-    </div>
-
-    <div class="ux-banner-spacer"></div>
-
-    <div id="ux-lsx" class="row ux-banner" data-parallax="scroll" data-image-src="images/jag.jpg">
-      <div class="col-xs-1 col-md-6"></div>
-      <div class="col-xs-10 col-md-4 col-bottom-align">
-        <div class="ux-banner-desc">
-          <h2>Large Scale Touch Experiences</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+        <a id="ux"></a>
+        <h1>UX Design</h1>
       </div>
       <div class="col-xs-1 col-md-2"></div>
     </div>
 
-    <div class="ux-banner-spacer"></div>
-
-    <div id="ux-mobile" class="row ux-banner" data-parallax="scroll" data-image-src="images/rally.jpg">
-      <div class="col-xs-1 col-md-6"></div>
-      <div class="col-xs-10 col-md-4 col-bottom-align">
-        <div class="ux-banner-desc">
-          <h2>Mobile Apps</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+    <div id="ux-row" class="row">
+      <div id="ux-vr" class="col-md-4 ux-link">
+        <div class="ux-title"><h1>Virtual Reality</h1></div>
       </div>
-      <div class="col-xs-1 col-md-2"></div>
+      <div id="ux-lsx" class="col-md-4 ux-link">
+        <div class="ux-title"><h1>Large Scale Multitouch</h1></div>
+      </div>
+      <div id="ux-mobile" class="col-md-4 ux-link">
+        <div class="ux-title"><h1>Mobile Apps</h1></div>
+      </div>
+      <div class="clearfix visible-sm-block"></div>
     </div>
-    
+
     <div class="ux-banner-spacer"></div>
 
     <div class="row">
       <div class="col-xs-1 col-md-2"></div>
       <div class="col-xs-10 col-md-8">
+        <a id="about"></a>
         <h1>About</h1>
       </div>
       <div class="col-xs-1 col-md-2"></div>
