@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="styles/main.css" type='text/css'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,400italic' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="styles/featherlight.min.css" type='text/css'>
-    <link rel="stylesheet" href="styles/featherlight.gallery.min.css" type='text/css'>
+    <link rel="stylesheet" href="styles/featherlight.css" type='text/css'>
+    <link rel="stylesheet" href="styles/featherlight.gallery.css" type='text/css'>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="scripts/featherlight.min.js"></script>
     <script src="scripts/featherlight.gallery.min.js"></script>
+    <script src="scripts/ux.js"></script>
   </head>
   <body>
     <div id="header" class="row">
@@ -53,6 +54,8 @@
           Topics covered in the document include the different scenarios for using large scale displays, human factors, controls placement, the use of colour and animation.
         </p>
 
+        <a href="https://1drv.ms/w/s!ArnJMYksnbBwgsx8hG32X71USkVNlQ" target="_blank"><img src="images/ux_guidelines/image0.jpg" class="content-thumb" alt="Demo of Processing prototype. The monitor used is not touch enabled; all hand and finger tracking done using Leap Motion controller. Open hand gesture brings up mock contextual menu."></a>
+
         <div class="spacer"></div>
 
         <a id="lsx-nav"></a>
@@ -63,6 +66,20 @@
         <p>
           This UX prototype explored ways to provide subtle navigation bounds and visual feedback to address this issue.
         </p>
+        <h2>Issues Addressed</h2>
+        <ul>
+          <li>Targeting large scale Perceptive Pixel (stylus and multi-touch enabled) displays</li>
+          <li>Enable the benefit of an infinite canvas while subtly restricting the experience so the user doesn't get lost</li>
+          <li>Mini-maps and similar positional references don't work as well on large scale displays - mini-maps placed on the corners of the canvas space will fall beyond the user's FOV on a large scale display. The same issue applies for zoom controls.</li>
+          <li>Physical movement across a large scale display can be tiring. Leverage the ability for users to pull content towards themselves instead of having to walk, stretch or bend down to reach the content</li>
+          <li>Without consistent zoom indicators, a user can unintentionally write text at varying</li>
+        </ul>
+        <h2>Approach</h2>
+        <ul>
+          <li>Use bounded panning to keep at least a small portion of the user's content visible on the screen</li>
+          <li>On screen zoom indicators, and snapped zoom levels, to give feedback of zoom state</li>
+          <li>The ability to pull the canvas in all directions to bring the content to a comfortable writing level for the user</li>
+        </ul>
 
         <div class="spacer"></div>
 
@@ -74,6 +91,19 @@
         <p>
           This UX prototype explored the use of a Leap Motion controller to bridge the gap between gestural and touch controls, enabling a hover state for touch.
         </p>
+        <h2>Issues Addressed</h2>
+        <ul>
+          <li>Touch screens do not provide hover feedback for touch points</li>
+          <li>Gestural controls are too freeform</li>
+        </ul>
+        <h2>Approach</h2>
+        <ul>
+          <li>Used Leap Motion SDK to provide hover feedback for touch points</li>
+          <li>Hover for more information - This is a common, accepted gesture when using mouse controls, but there is no analog for this when using touch</li>
+          <li>Palm detection for stylus scenarios - By leveraging the Leap Motion's capability to see tools, palm rejection can be performed in a more intelligent way, leading to a more natural stylus experience (avoiding hacks like disabling all touch when a stylus is in hover range</li>
+        </ul>
+
+        <a href="https://www.youtube.com/embed/5FcQw4cDi7I" data-featherlight="iframe"><img src="images/touch_hover/image0.jpg" class="content-thumb" alt="Demo of Processing prototype. The monitor used is not touch enabled; all hand and finger tracking done using Leap Motion controller. Open hand gesture brings up mock contextual menu."></a>
 
         <div class="spacer"></div>
 
@@ -85,11 +115,25 @@
         <p>
           This UX prototype explored leveraging a Kinect 2.0 to address these issues, providing user tracking for intelligent contextual controls placement.
         </p>
+        <h2>Issues Addressed</h2>
+        <ul>
+          <li>Targeting large scale Perceptive Pixel (stylus and multi-touch enabled) displays</li>
+          <li>Traditional control placements in toolbars and palettes can be difficult or tiring to repeatedly reach and use</li>
+          <li>A singular set of content creation controls breaks down for multiple simultaneous user scenarios</li>
+        </ul>
+        <h2>Approach</h2>
+        <ul>
+          <li>Prototype basis was a whiteboard content creation app</li>
+          <li>Use Kinect 2.0 skeletal SDK to track the physical location of users</li>
+          <li>Intelligently place contextual controls within the reach of users based on their skeletal location, while taking care to avoid placement in the area they're actively writing/drawing on</li>
+          <li>Explored further contextual tools that replicate physical tools - touch and stylus enabled rulers for straight edges</li>
+          <li>Proposed use of Kinect skeletal ID to present multiple simultaneous contextual controls, bind skeletal ID to inputs</li>
+        </ul>
 
         <div class="spacer"></div>
       </div>
       <div class="col-md-2 hidden-sm">
-        <div id="content-menu" data-spy="affix" data-offset-top="350">
+        <div id="content-menu" data-spy="affix" data-offset-top="398">
           <ul>
             <li><a href="#lsx-guidelines">UX Guidelines</a></li>
             <li><a href="#lsx-nav">Infinite Canvas Navigation</a></li>

@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="styles/main.css" type='text/css'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,400italic' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="styles/featherlight.min.css" type='text/css'>
-    <link rel="stylesheet" href="styles/featherlight.gallery.min.css" type='text/css'>
+    <link rel="stylesheet" href="styles/featherlight.css" type='text/css'>
+    <link rel="stylesheet" href="styles/featherlight.gallery.css" type='text/css'>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="scripts/featherlight.min.js"></script>
     <script src="scripts/featherlight.gallery.min.js"></script>
+    <script src="scripts/ux.js"></script>
   </head>
   <body>
     <div id="header" class="row">
@@ -49,15 +50,28 @@
         <p>
           When going on a trip, friends and loved ones will often like to keep tabs on one's progress, particularly if travelling alone. Inspired by my friend's solo motorcycle trip across North America, the goal of the Ping app is to provide a means for users to easily inform their friends and loved ones of their whereabouts through social media.
         </p>
+        <h2>Issues Addressed</h2>
+        <ul>
+          <li>Friends and loved ones want to keep tabs on a user's progress on a trip</li>
+          <li>It can be easy to forget to, and sometimes inconvenient, to manually check-in on social media to report one's progress</li>
+          <li>Travelling through low cellular reception areas can make it difficult to check-in via a data connection</li>
+        </ul>
+        <h2>Approach</h2>
+        <ul>
+          <li>The Ping app provides an easy means to send updates to social media (i.e. Facebook, Twitter)</li>
+          <li>Easy, single tap experience to manually report a user's location</li>
+          <li>Ability to setup automatic timed posts to social media, reporting the user's position</li>
+          <li>In areas where cellular reception is too low for a data connection, use SMS under the covers to report the user's position</li>
+        </ul>
 
         <section data-featherlight-gallery data-featherlight-filter="a">
-          <a href="images/ping_app/image0.jpg"><img src="images/ping_app/image0.jpg" class="content-thumb"></a>
-          <a href="images/ping_app/image1.jpg"><img src="images/ping_app/image1.jpg" class="content-thumb"></a>
-          <a href="images/ping_app/image2.jpg"><img src="images/ping_app/image2.jpg" class="content-thumb"></a>
-          <a href="images/ping_app/image3.jpg"><img src="images/ping_app/image3.jpg" class="content-thumb"></a>
-          <a href="images/ping_app/image4.jpg"><img src="images/ping_app/image4.jpg" class="content-thumb"></a>
-          <a href="images/ping_app/image5.jpg"><img src="images/ping_app/image5.jpg" class="content-thumb"></a>
-          <a href="images/ping_app/image6.jpg"><img src="images/ping_app/image6.jpg" class="content-thumb"></a>
+          <a href="images/ping_app/image0.jpg"><img src="images/ping_app/image0.jpg" class="content-thumb" alt="Ideation page detailing overall functionality of the app, along with other potential features."></a>
+          <a href="images/ping_app/image1.jpg"><img src="images/ping_app/image1.jpg" class="content-thumb" alt="Rough sketches of the first launch and main screen."></a>
+          <a href="images/ping_app/image2.jpg"><img src="images/ping_app/image2.jpg" class="content-thumb" alt="First launch screen. Allows users to link social media accounts to post to with Ping."></a>
+          <a href="images/ping_app/image3.jpg"><img src="images/ping_app/image3.jpg" class="content-thumb" alt="Main screen. Quick and easy for users to send a 'ping', posting on their current locations to their social networks."></a>
+          <a href="images/ping_app/image4.jpg"><img src="images/ping_app/image4.jpg" class="content-thumb" alt="Enabling 'AutoPing' will allow the app to post location notifications at specified intervals."></a>
+          <a href="images/ping_app/image5.jpg"><img src="images/ping_app/image5.jpg" class="content-thumb" alt="Scheduled 'AutoPings', for those times when users want to preemptively setup an AutoPing."></a>
+          <a href="images/ping_app/image6.jpg"><img src="images/ping_app/image6.jpg" class="content-thumb" alt="Settings page, allowing management of social network accounts, and setting up quiet times to avoid sending pings in the middle of the night."></a>
         </section>
 
         <div class="spacer"></div>
