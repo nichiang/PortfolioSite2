@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nick Chiang / Large Scale Multitouch</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" type='text/css'>
+    <link rel="stylesheet" href="styles/main.css" type='text/css'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,400italic' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/featherlight.min.css" type='text/css'>
+    <link rel="stylesheet" href="styles/featherlight.gallery.min.css" type='text/css'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="scripts/featherlight.min.js"></script>
+    <script src="scripts/featherlight.gallery.min.js"></script>
+  </head>
+  <body>
+    <div id="header" class="row">
+      <div class="col-md-1 hidden-sm"></div>
+      <div class="col-md-10">
+      <a href="index.html">Nick Chiang</a> /
+      <a href="index.html#ux">UX Design</a> /
+      <a href="index.html#about">About</a>
+      </div>
+      <div class="col-md-1 hidden-sm"></div>
+    </div>
+
+    <div id="top-lsx" class="row top-content-banner-img">
+      <div class="col-md-1 hidden-sm"></div>
+      <div class="col-md-10 col-bottom-align">
+        <div id="ux-top-banner-desc">
+          <h1>Large Scale Multitouch</h1>
+        </div>
+      </div>
+      <div class="col-md-1 hidden-sm"></div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="row">
+      <div class="col-md-1 hidden-sm"></div>
+      <div class="col-md-8">
+        <a id="lsx-guidelines"></a>
+        <h1>UX Guidelines</h1>
+        <p>
+          Large scale Perceptive Pixel displays come with their own set of UX challenges and restrictions that aren't evidently when developing applications on laptop and desktop sized touch devices. On the Large Screen Experience team at Microsoft, the recognition of these issues led me to create a set of UX guidelines for apps that target large scale displays.
+        </p>
+        <p>
+          Topics covered in the document include the different scenarios for using large scale displays, human factors, controls placement, the use of colour and animation.
+        </p>
+
+        <div class="spacer"></div>
+
+        <a id="lsx-nav"></a>
+        <h1>Infinite Canvas Navigation</h1>
+        <p>
+          Digital whiteboards often espouse the benefit of an infinite canvas. However, with unconfined pan and touch capabilities, and a lack of solid points of reference, users can easily become lost within the space. This problem is compounded when the experience is run on a large scale display.
+        </p>
+        <p>
+          This UX prototype explored ways to provide subtle navigation bounds and visual feedback to address this issue.
+        </p>
+
+        <div class="spacer"></div>
+
+        <a id="lsx-hover"></a>
+        <h1>Touch Hover Exploration</h1>
+        <p>
+          Touch points on touchscreens can be viewed as an inherently single bit operation - the touch is either on the screen or not. At the same time, gestural controls can feel too freeform due to its lack of haptic feedback.
+        </p>
+        <p>
+          This UX prototype explored the use of a Leap Motion controller to bridge the gap between gestural and touch controls, enabling a hover state for touch.
+        </p>
+
+        <div class="spacer"></div>
+
+        <a id="lsx-adaptive"></a>
+        <h1>Adaptive UX</h1>
+        <p>
+          Content creation on large scale displays can often be encumbered by the poor placement of controls. Having to bend, stretch or walk over to reach traditional tool bar and palette placements can be physically tiring after a few minutes of usage. Furthermore, really large scale displays (80+) can accommodate multiple simultaneous users, which can break down traditional controls intended for a single user.
+        </p>
+        <p>
+          This UX prototype explored leveraging a Kinect 2.0 to address these issues, providing user tracking for intelligent contextual controls placement.
+        </p>
+
+        <div class="spacer"></div>
+      </div>
+      <div class="col-md-2 hidden-sm">
+        <div id="content-menu" data-spy="affix" data-offset-top="350">
+          <ul>
+            <li><a href="#lsx-guidelines">UX Guidelines</a></li>
+            <li><a href="#lsx-nav">Infinite Canvas Navigation</a></li>
+            <li><a href="#lsx-hover">Touch Hover Exploration</a></li>
+            <li><a href="#lsx-adaptive">Adaptive UX</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-1 hidden-sm"></div>
+    </div>
+
+  </body>
+</html>
