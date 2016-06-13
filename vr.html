@@ -2,50 +2,128 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Nick Chiang / Virtual Reality</title>
+    <title>Nick Chiang / Mobile Apps</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" href="styles/bootstrap.min.css" type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" type='text/css'>
     <link rel="stylesheet" href="styles/main.css" type='text/css'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,400italic' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/featherlight.css" type='text/css'>
+    <link rel="stylesheet" href="styles/featherlight.gallery.css" type='text/css'>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <!--<script src="scripts/parallax.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="scripts/featherlight.min.js"></script>
+    <script src="scripts/featherlight.gallery.min.js"></script>
+    <script src="scripts/ux.js"></script>
   </head>
   <body>
     <div id="header" class="row">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-10">
-      <a href="index.html">Nick Chiang</a> /
-      <a href="index.html#ux">UX Design</a> /
-      <a href="index.html#about">About</a>
+      <div class="col-md-1 hidden-sm"></div>
+      <div class="col-md-10">
+        <a href="index.html">Nick Chiang</a> /
+        <a href="index.html#ux">UX Design</a> /
+        <a href="#footer">Contact</a>
       </div>
-      <div class="col-xs-1"></div>
+      <div class="col-md-1 hidden-sm"></div>
     </div>
 
     <div id="top-vr" class="row top-content-banner-img">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-10 col-bottom-align">
+      <div class="col-md-1 hidden-sm"></div>
+      <div class="col-md-10 col-bottom-align">
         <div id="ux-top-banner-desc">
           <h1>Virtual Reality</h1>
         </div>
       </div>
-      <div class="col-xs-1"></div>
+      <div class="col-md-1 hidden-sm"></div>
     </div>
 
-    <div class="ux-banner-spacer"></div>
+    <div class="spacer"></div>
 
     <div class="row">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-10">
-        <a id="ux"></a>
-        <h1>UX Design</h1>
+      <div class="col-md-1 hidden-sm"></div>
+      <div class="col-md-8">
+        <a id="vr-jaunt"></a>
+        <h1>Jaunt VR App</h1>
+        <p>
+          The Jaunt VR app is a library for 360 video content, designed to work on a range of VR devices from smartphones with Google Cardboard, to Oculus Rift and HTC Vive desktop HMDs.
+        </p>
+        <p>
+          There were numerous challenges to overcome when we designed this app from the ground up - a low minimum baseline device with no button input, a lack of existing design patterns that users understand, the need to create an experience approachable by users new to the medium of VR. Tackling this involved much experimentation and prototyping, during which we also developed many new VR focused prototyping tools and processes (mostly around Unity). We went through multiple iterations and rounds of user testing to arrive at the experience that was shipped to consumers.
+        </p>
+        <p>
+          The Jaunt VR app is available for download on these platforms: Android (Cardboard), iOS (Cardboard), GearVR, Oculus Rift, HTC Vive.
+        </p>
+        <h2>Issues and Requirements</h2>
+        <ul>
+          <li>No guarantee of a trigger for user input - Not having a button and relying solely on the user's gaze became the baseline target for the experience</li>
+          <li>No standard control paradigms - All standard controls found on web, mobile and desktop experiences rely on having a keyboard, mouse or touchscreen to signal the user's intent</li>
+          <li>No standards for visual hierarchy in an immersive 3D space - There's no longer an 'edge of the screen' that can be relied on to visually anchor content and controls to</li>
+        </ul>
+        <h2>Approach</h2>
+        <ul>
+          <li>Designed a gaze based button that triggers after looking at it for a set amount of time, signaling user intent</li>
+          <li>On content thumbnails, a two-state hover mechanism surfaces a separate selection button to avoid accidental selection issues</li>
+          <li>Designed a mechanism for activating playback controls in a 360 video that takes up the entire view</li>
+          <li>Developed a visual hierarchy for laying out content and controls - Global navigation gets anchored towards the ground (less neck strain than above), while content gets anchored around the horizon</li>
+          <li>Developed a set of guidelines for 3D asset placement, focused on keeping content readable in HMD, visible within different FOVs of different headsets, and ensuring the objects were comfortably positioned and integrated with the background environment</li>
+          <li>Created hardware input mappings that correspond to platform defaults - Ex. tapping on the trackpad for selection on the GearVR versus pulling the trigger on a Vive controller</li>
+          <li>Designed a toggleable VR/2D mode for smartphones users without a Google Cardboard</li>
+        </ul>
+
+        <div class="spacer"></div>
+
+        <section data-featherlight-gallery data-featherlight-filter="a">
+          <a href="images/jaunt_vr_app/image0.jpg"><img src="images/jaunt_vr_app/image0.jpg" class="content-thumb" alt="The initial Home world that users arrive at."></a>
+          <a href="images/jaunt_vr_app/image1.jpg"><img src="images/jaunt_vr_app/image1.jpg" class="content-thumb" alt="The gaze timer mechanism on a button."></a>
+          <a href="images/jaunt_vr_app/image2.jpg"><img src="images/jaunt_vr_app/image2.jpg" class="content-thumb" alt="The playback controls trigger button following the user's view."></a>
+          <a href="images/jaunt_vr_app/image3.jpg"><img src="images/jaunt_vr_app/image3.jpg" class="content-thumb" alt="The playback controls when activated."></a>
+          <a href="images/jaunt_vr_app/image4.jpg"><img src="images/jaunt_vr_app/image4.jpg" class="content-thumb" alt="The 2D mode view of the app for smartphone users without a Google Cardboard."></a>
+        </section>
+
+        <div class="spacer"></div>
+
       </div>
-      <div class="col-xs-1"></div>
+      <div class="col-md-2 hidden-sm">
+        <div id="content-menu" data-spy="affix" data-offset-top="350">
+          <ul>
+            <li><a href="#">Virtual Reality</a></li>
+            <li>
+              <ul>
+                <li><a href="#vr-jaunt">Jaunt VR App</a></li>
+              </ul>
+            </li>
+            <li><a href="lsx.html">Large Scale Multitouch</a></li>
+            <li><a href="mobile.html">Mobile Apps</a></li>
+            <li><hr></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-1 hidden-sm"></div>
     </div>
 
-    
+    <div id="footer">
+      <p>
+        <a href="https://dl.dropboxusercontent.com/u/16436695/NickChiang_UXDesigner_Resume.pdf">Resume</a> / 
+        <a href="mailto:nick.chiang@gmail.com">Email</a> / 
+        <a href="https://www.linkedin.com/in/nickchiang">LinkedIn</a> / 
+        <a href="https://www.pinterest.com/icefenix/">Pinterest</a> / 
+        <a href="https://github.com/nichiang">GitHub</a>
+      </p>
+      &copy; 2016 Nick Chiang
+    </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57622446-1');
+      //ga('send', 'pageview');
+    </script>
   </body>
 </html>

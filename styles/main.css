@@ -23,7 +23,7 @@ h1, h2, h3 {
 }
 
 #header {
-	padding: 10px;
+	padding: 10px 0px;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1.45em;
 	color: #222222;
@@ -215,10 +215,32 @@ h1, h2, h3 {
 	}
 }
 
+/*
+#about {
+	min-height: 300px;
+	background-image: url('../images/about.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+*/
 .spacer {
 	height: 50px;
 }
 
+hr {
+	border-top: 1px dotted #bbb;
+	margin: 5px 0px;
+}
+
+hr.ux-spacer {
+	margin: 50px 0px 50px 0px;
+}
+
+#footer {
+	width: 100%;
+	text-align: center;
+	margin: 100px 0px 50px 0px;
+}
 
 /* Content Pages ----------------------------------------------- */
 
@@ -263,8 +285,11 @@ h1, h2, h3 {
 }
 
 .content-thumb {
-	width: 250px;
+	width: 225px;
+	height: 200px;
+	object-fit: cover;
 	border: 1px solid #ccc;
+	margin: 0px 10px 10px 0px;
 }
 
 @media (max-width: 767px) {

@@ -23,9 +23,9 @@
     <div id="header" class="row">
       <div class="col-md-1 hidden-sm"></div>
       <div class="col-md-10">
-      <a href="index.html">Nick Chiang</a> /
-      <a href="index.html#ux">UX Design</a> /
-      <a href="index.html#about">About</a>
+        <a href="index.html">Nick Chiang</a> /
+        <a href="index.html#ux">UX Design</a> /
+        <a href="#footer">Contact</a>
       </div>
       <div class="col-md-1 hidden-sm"></div>
     </div>
@@ -45,12 +45,39 @@
     <div class="row">
       <div class="col-md-1 hidden-sm"></div>
       <div class="col-md-8">
+      <a id="mobile-jaunt"></a>
+        <h1>Jaunt Player App</h1>
+        <p>
+          The Jaunt Player app is a 360 degree video app designed for iOS and Cardboard. It presents users with a simple 2D interface for selecting a piece of content to watch, then prompts users to view the content within a Cardboard VR headset.
+        </p>
+        <h2>Issues and Requirements</h2>
+        <ul>
+          <li>Allow content managers to highlight newly added and featured content on the main screen.</li>
+          <li>The majority of users of the app are new to VR and Cardboard headsets, and need guidance through the experience.</li>
+        </ul>
+        <h2>Approach</h2>
+        <ul>
+          <li>A server configurable layout hierarchy and badging system to allow </li>
+          <li>Individual video preview pages that give users more information about the video they're about to watch, as well as the ability to share out to social media.</li>
+          <li>Multiple points of guidance for users new to VR - information page with details on acquiring and using a Cardboard headset, guided prompts prior to watching videos to give time for users to get their Cardboard headsets setup.</li>
+          <li>Quick turnaround time - app was designed, written and shipped to the Apple app store in the span of 2 weeks.</li>
+        </ul>
+
+        <div class="spacer"></div>
+
+        <section data-featherlight-gallery data-featherlight-filter="a">
+          <a href="images/mobile_jaunt_app/image0.jpg"><img src="images/mobile_jaunt_app/image0.jpg" class="content-thumb" alt="Main screen, featuring a variable content hierarchy, and a link to the information page."></a>
+          <a href="images/mobile_jaunt_app/image1.jpg"><img src="images/mobile_jaunt_app/image1.jpg" class="content-thumb" alt="Content preview screen, with social share link."></a>
+        </section>
+
+        <hr class="ux-spacer">
+
         <a id="mobile-ping"></a>
-        <h1>Ping App</h1>
+        <h1>Ping App Concept</h1>
         <p>
           When going on a trip, friends and loved ones will often like to keep tabs on one's progress, particularly if travelling alone. Inspired by my friend's solo motorcycle trip across North America, the goal of the Ping app is to provide a means for users to easily inform their friends and loved ones of their whereabouts through social media.
         </p>
-        <h2>Issues Addressed</h2>
+        <h2>Issues and Requirements</h2>
         <ul>
           <li>Friends and loved ones want to keep tabs on a user's progress on a trip</li>
           <li>It can be easy to forget to, and sometimes inconvenient, to manually check-in on social media to report one's progress</li>
@@ -63,6 +90,8 @@
           <li>Ability to setup automatic timed posts to social media, reporting the user's position</li>
           <li>In areas where cellular reception is too low for a data connection, use SMS under the covers to report the user's position</li>
         </ul>
+
+        <div class="spacer"></div>
 
         <section data-featherlight-gallery data-featherlight-filter="a">
           <a href="images/ping_app/image0.jpg"><img src="images/ping_app/image0.jpg" class="content-thumb" alt="Ideation page detailing overall functionality of the app, along with other potential features."></a>
@@ -80,12 +109,42 @@
       <div class="col-md-2 hidden-sm">
         <div id="content-menu" data-spy="affix" data-offset-top="350">
           <ul>
-            <li><a href="#mobile-ping">Ping App</a></li>
+            <li><a href="vr.html">Virtual Reality</a></li>
+            <li><a href="lsx.html">Large Scale Multitouch</a></li>
+            <li><a href="#">Mobile Apps</a></li>
+            <li>
+              <ul>
+                <li><a href="#mobile-jaunt">Jaunt Player App</a></li>
+                <li><a href="#mobile-ping">Ping App Concept</a></li>
+              </ul>
+            </li>
+            <li><hr></li>
+            <li><a href="index.html">Home</a></li>
           </ul>
         </div>
       </div>
       <div class="col-md-1 hidden-sm"></div>
     </div>
 
+    <div id="footer">
+      <p>
+        <a href="https://dl.dropboxusercontent.com/u/16436695/NickChiang_UXDesigner_Resume.pdf">Resume</a> / 
+        <a href="mailto:nick.chiang@gmail.com">Email</a> / 
+        <a href="https://www.linkedin.com/in/nickchiang">LinkedIn</a> / 
+        <a href="https://www.pinterest.com/icefenix/">Pinterest</a> / 
+        <a href="https://github.com/nichiang">GitHub</a>
+      </p>
+      &copy; 2016 Nick Chiang
+    </div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57622446-1');
+      //ga('send', 'pageview');
+    </script>
   </body>
 </html>
