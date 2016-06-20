@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="scripts/vrproto1.js"></script>
+  </head>
+  <body onkeydown="keyListener(event)">
+    <a-scene>
+      <a-assets>
+        <a-mixin id="thumbnail" geometry="primitive: plane; height: 0.9; width: 1.6" material="shader: flat; color: #333333; side: double "></a-mixin>
+        <a-mixin id="secondbutton" geometry="primitive: circle; radius: 0.15" material="shader: flat; color: red; side: double"></a-mixin>
+      </a-assets>
+
+      <a-sky src="images/vr_proto1/background.jpg"></a-sky>
+
+      <a-entity id="layouts">
+        <a-entity id="layout1" visible="true">
+          <a-entity position="0 1.8 0" rotation="0 35 0">
+            <a-entity mixin="thumbnail" position="0 0 -3"></a-entity>
+          </a-entity>
+          <a-entity position="0 1.8 0" rotation="0 0 0">
+            <a-entity mixin="thumbnail" position="0 0 -3" onload="initSecondButton(event)">
+              <a-entity id="select" mixin="secondbutton" position="0 -0.4 0.05" visible="false"></a-entity>
+            </a-entity>
+          </a-entity>
+          <a-entity position="0 1.8 0" rotation="0 -35 0">
+            <a-entity mixin="thumbnail" position="0 0 -3"></a-entity>
+          </a-entity>
+        </a-entity>
+
+        <a-entity id="layout2" visible="false">
+          <a-entity position="0 1.8 0" rotation="0 35 0">
+            <a-entity mixin="thumbnail" scale="0.47 0.47 0.47" position="0.385 0.225 -3"></a-entity>
+            <a-entity mixin="thumbnail" scale="0.47 0.47 0.47" position="-0.385 0.225 -3"></a-entity>
+            <a-entity mixin="thumbnail" scale="0.47 0.47 0.47" position="0.385 -0.225 -3"></a-entity>
+            <a-entity mixin="thumbnail" scale="0.47 0.47 0.47" position="-0.385 -0.225 -3"></a-entity>
+          </a-entity>
+          <a-entity position="0 1.8 0" rotation="0 0 0">
+            <a-entity mixin="thumbnail" position="0 0 -3"></a-entity>
+          </a-entity>
+          <a-entity position="0 1.8 0" rotation="0 -35 0">
+            <a-entity mixin="thumbnail" scale="0.47 0.47 0.47" position="0.385 0.225 -3"></a-entity>
+            <a-entity mixin="thumbnail" scale="0.47 0.47 0.47" position="-0.385 0.225 -3"></a-entity>
+            <a-entity mixin="thumbnail" scale="0.47 0.47 0.47" position="0.385 -0.225 -3"></a-entity>
+            <a-entity mixin="thumbnail" scale="0.47 0.47 0.47" position="-0.385 -0.225 -3"></a-entity>
+          </a-entity>
+        </a-entity>
+      </a-entity>
+
+      <a-entity id="rings">
+        <a-entity geometry="primitive: ring; radiusInner: 0.99; radiusOuter: 1.01" position="0 0 0" rotation="-90 0 0" material="shader: flat; color: #aaa"></a-entity>
+        <a-entity geometry="primitive: ring; radiusInner: 1.99; radiusOuter: 2.01" position="0 0 0" rotation="-90 0 0" material="shader: flat; color: #aaa"></a-entity>
+        <a-entity geometry="primitive: ring; radiusInner: 2.99; radiusOuter: 3.01" position="0 0 0" rotation="-90 0 0" material="shader: flat; color: #aaa"></a-entity>
+      </a-entity>
+
+      <a-camera position="0 1.8 0" fov="60">
+        <a-entity geometry="primitive: ring; radiusInner: 0.075; radiusOuter: 0.1; thetaStart: 90; thetaLength: 0;"
+          position="0 0 -2"
+          scale="0.4 0.4 0.4"
+          material="shader: flat; color: red"></a-entity>
+        <a-entity cursor="fuse: true; maxDistance: 30; timeout: 1000"
+          position="0 0 -2"
+          scale="0.2 0.2 0.2"
+          geometry="primitive: ring; radiusInner: 0.075; radiusOuter: 0.1;"
+          material="color: red; shader: flat">
+          <a-animation begin="fusing" easing="ease-in" attribute="geometry.thetaLength"
+                       fill="both" from="0" to="360"></a-animation>
+          <a-animation begin="click" easing="ease-in" attribute="geometry.thetaLength"
+                       fill="backwards" from="360" to="0" dur="0"></a-animation>
+        </a-entity>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
