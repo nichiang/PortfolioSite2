@@ -12,6 +12,10 @@ h1, h2, h3 {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
+h1 {
+	margin-bottom: 20px;
+}
+
 .row {
 	margin-left: 0px;
 	margin-right: 0px;
@@ -35,11 +39,11 @@ h1, h2, h3 {
 }
 
 #top-home-img {
-	background-image: url('../images/header.jpg');
+	background-image: url('../images/header2.jpg');
 	box-shadow: 0px -80px 150px -50px #000 inset;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
 	.top-banner-img {
 		height: 350px;
 		background-size: cover;
@@ -55,7 +59,7 @@ h1, h2, h3 {
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
 	#top-home-row {
 		position: absolute;
 		height: 550px;
@@ -70,11 +74,11 @@ h1, h2, h3 {
 	}
 
 	#top-banner-desc {
-		background-color: rgba(255, 255, 255, 0.75);
-		padding: 10px 20px;
+		background-color: rgba(238, 238, 238, 0.85);
+		padding: 15px 30px;
 		position: absolute;
-		left: -5px;
-		bottom: 20px;
+		left: -15px;
+		bottom: 30px;
 	}
 }
 
@@ -89,8 +93,7 @@ h1, h2, h3 {
 }
 
 #ux-link-row {
-	margin-left: -15px;
-	margin-right: -15px;
+	padding: 0px;
 }
 
 .ux-link {
@@ -98,7 +101,7 @@ h1, h2, h3 {
 	min-height: 300px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	.ux-title {
 		bottom: 10px;
 		padding: 10px 20px;
@@ -116,17 +119,18 @@ h1, h2, h3 {
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.ux-title {
-		width: calc(100% - 30px);
+		width: calc(100% - 90px);
 		height: 10%;
-		top: 50%;
+		bottom: 10%;
 		margin-top: -5%;
+		margin-left: 5%;
 	}
 
 	.ux-link {
-		text-align: center;
-		color: transparent;
+		text-align: left;
+		color: #fff;
 	}
 
 	.ux-link:hover {
@@ -155,15 +159,15 @@ h1, h2, h3 {
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	#ux-vr {
-		background-image: url('../images/vr.jpg');
+		background-image: url('../images/vr2.jpg');
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	#ux-vr:before {
-		background-image: url('../images/vr.jpg');
+		background-image: url('../images/vr2.jpg');
 	}
 
 	#ux-vr:before, #ux-vr:after {
@@ -175,13 +179,13 @@ h1, h2, h3 {
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	#ux-lsx {
 		background-image: url('../images/ppi.jpg');
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	#ux-lsx:before {
 		background-image: url('../images/ppi.jpg');
 	}
@@ -195,13 +199,13 @@ h1, h2, h3 {
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	#ux-mobile {
 		background-image: url('../images/mobile.jpg');
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	#ux-mobile:before {
 		background-image: url('../images/mobile.jpg');
 	}
@@ -224,7 +228,7 @@ h1, h2, h3 {
 }
 */
 .spacer {
-	height: 50px;
+	height: 20px;
 }
 
 hr {
@@ -264,11 +268,11 @@ hr.ux-spacer {
 }
 
 #top-vr:before {
-	background-image: url('../images/vr.jpg');
+	background-image: url('../images/vr2.jpg');
 }
 
 #top-lsx:before {
-	background-image: url('../images/ppi	.jpg');
+	background-image: url('../images/ppi.jpg');
 }
 
 #top-mobile:before {
